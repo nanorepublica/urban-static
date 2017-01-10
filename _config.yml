@@ -1,0 +1,134 @@
+# Site settings
+title: Wedding!
+email: wedding@hollyandandrew.co.uk
+url: https://hollyandandrew.co.uk
+description: "Holly Phillips and Andrew Miller are getting Married!"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#F9EACC'
+  # primary-dark: '#F4E2BE'
+  links: '#62892A'
+
+# Footer settings
+footer: Holly & Andy
+site-icon: heart-o
+
+
+site-map:
+    home:
+        header:
+          title: 06 . 08 . 2016
+          subtitle: Save the Date
+          subsubtitle: Holly Phillips & Andrew Miller
+        title: home
+        sections:
+            - about
+            - how_long
+            - contact
+            - map
+        menu:
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    about:
+        title: Welcome!
+    how_long:
+        title: How Long?
+    contact:
+        title: Contact Us
+    map:
+        title: Where?
+    ceremony:
+        header:
+          title: Ceremony
+          subtitle: "&nbsp;"
+          subsubtitle: "&nbsp;"
+        title: Ceremony
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    reception:
+        title: Evening
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    the-day:
+        title: The Big Day
+        submenu:
+            - ceremony
+            - reception
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    accommodation:
+        title: Accommodation
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    rsvp:
+        title: RSVP
+        path: rsvp
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    giftlist:
+        title: Gift List
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    todocambridge:
+        title: Things to do in Cambridge
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+            - faq
+    faq:
+        title: FAQ
+        menu:
+            - home
+            - the-day
+            - accommodation
+            - rsvp
+            - giftlist
+
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+gems:
+  - jekyll-babel
+  - jekyll-admin
+
+# babel_js_extensions: 'es6, babel, jsx'

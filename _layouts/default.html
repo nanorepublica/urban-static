@@ -1,1 +1,33 @@
-{{ content }}
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
+    {% include nav.html %}
+
+    {% include header.html %}
+
+    {% for order in site.site-map[page.key].sections %}
+        {% for page in site.pages %}
+            {% assign name = page.name | remove: '.md' %}
+
+            {% if name == order %}
+                <section id="{{ name }}" class="content-section text-center">
+                    <div class="{{ name }}-section">
+                        <div class="container">
+                            <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        {{ page.content | markdownify }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+         {% endfor %}
+    {% endfor %}
+
+    {% include footer.html %}
+    {% include js.html %}
+    </body>
+</html>
