@@ -5,7 +5,7 @@ body {
     font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
     /*font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
     color: #0c0c0c;
-    background-color: {{ site.color.primary-dark }};
+    background-color: $brand-color;
 }
 
 html {
@@ -41,7 +41,7 @@ p {
 }
 
 a {
-    color: {{ site.color.links }};
+    color: $secondary-color;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -62,7 +62,7 @@ a:focus {
     border-bottom: 1px solid rgba(0,0,0,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: {{ site.color.primary-dark }};
+    background-color: $brand-color;
 }
 
 .navbar-custom .navbar-brand {
@@ -132,7 +132,7 @@ a:focus {
 }
 
 .dropdown-menu>li>a:hover {
-    background-color: {{ site.color.primary-dark }};
+    background-color: $brand-color;
     /*border-bottom: 1px solid rgba(0,0,0,.3);*/
 }
 
@@ -150,7 +150,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: {{ site.color.primary-dark }};
+        background-color: $brand-color;
     }
 
     .navbar-custom a {
@@ -186,7 +186,7 @@ a:focus {
     }
 
     .dropdown-menu>li>a:hover {
-        background-color: {{ site.color.primary-dark }};
+        background-color: $brand-color;
         /*border-bottom: 1px solid rgba(0,0,0,.3);*/
     }
 
@@ -199,7 +199,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #0c0c0c;
-    background-color: {{ site.color.primary-dark }};
+    background-color: $brand-color;
 }
 
 .intro-home, .intro-giftlist {
@@ -336,7 +336,7 @@ a:focus {
 }
 
 @-webkit-keyframes pulse {
-    0 {
+    0% {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
@@ -353,7 +353,7 @@ a:focus {
 }
 
 @-moz-keyframes pulse {
-    0 {
+    0% {
         -moz-transform: scale(1);
         transform: scale(1);
     }
@@ -369,7 +369,7 @@ a:focus {
     }
 }
 
-#bunting {
+#sticky-header {
     width: 100%;
     background: url(/img/yellow-sage-banner-1.png) repeat-x left top scroll;
     background-size: 20%;
@@ -378,7 +378,7 @@ a:focus {
 }
 
 @media(min-width:993px) {
-    #bunting {
+    #sticky-header {
         width: 100%;
         background: url(/img/yellow-sage-banner-1.png) repeat-x left top scroll;
         /*background-size: contain;*/
@@ -388,7 +388,7 @@ a:focus {
 }
 
 @media(min-width:1400px) {
-    #bunting {
+    #sticky-header {
         width: 100%;
         background: url(/img/yellow-sage-banner-1.png) repeat-x left top scroll;
         /*background-size: contain;*/
@@ -406,7 +406,7 @@ a:focus {
     padding: 50px 0;
     color: #0c0c0c;
     background: url(/img/downing.png) no-repeat center center scroll;
-    background-color: {{ site.color.primary-dark }};
+    background-color: $brand-color;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -480,17 +480,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid {{ site.color.links }};
-    color: {{ site.color.links }};
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid {{ site.color.links }};
+    border: 1px solid $secondary-color;
     outline: 0;
-    color: {{ site.color.primary-dark }};
-    background-color: {{ site.color.links }};
+    color: $brand-color;
+    background-color: $secondary-color;
 }
 
 ul.banner-social-buttons {
