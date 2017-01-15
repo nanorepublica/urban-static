@@ -34,6 +34,7 @@ Todo:
     * update bootstrap to v4 (js & scss)
     * update jquery & easing plugin
     * split out theme scss files
+    * split out custom javascript (into library stuff vs custom page stuff vs settings)
 
 ## Contributing
 

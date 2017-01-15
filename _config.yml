@@ -13,14 +13,12 @@ color:
 # Footer settings
 footer: Holly & Andy
 footer_image: /img/line_holly_and_andy.png
-site-icon: heart-o
+site-icon: fa-heart-o
+map-center-lat: 52.2006602
+map-center-lng: 0.14
 
 site-map:
     home:
-        header:
-          title: 06 . 08 . 2016
-          subtitle: Save the Date
-          subsubtitle: Holly Phillips & Andrew Miller
         title: home
         sections:
             - about
@@ -42,10 +40,6 @@ site-map:
     map:
         title: Where?
     ceremony:
-        header:
-          title: Ceremony
-          subtitle: "&nbsp;"
-          subsubtitle: "&nbsp;"
         title: Ceremony
         menu:
             - home

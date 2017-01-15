@@ -1,9 +1,7 @@
 body {
     width: 100%;
     height: 100%;
-    /*font-family: 'Marck Script', cursive;*/
-    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-    /*font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: $font-family-serif;
     color: #0c0c0c;
     background-color: $brand-color;
 }
@@ -20,9 +18,8 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: $font-family-serif;
     text-transform: uppercase;
-    font-weight: 700;
     letter-spacing: 1px;
 }
 
@@ -61,7 +58,7 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(0,0,0,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: $font-family-sans-serif;
     background-color: $brand-color;
 }
 
@@ -187,7 +184,6 @@ a:focus {
 
     .dropdown-menu>li>a:hover {
         background-color: $brand-color;
-        /*border-bottom: 1px solid rgba(0,0,0,.3);*/
     }
 
 }
@@ -198,43 +194,24 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: #0c0c0c;
+    color: $intro-font-color;
     background-color: $brand-color;
 }
 
-.intro-home, .intro-giftlist {
-    background: url(/img/proposal.png) no-repeat bottom center / cover scroll;
-}
-
-.intro-ceremony {
-    background: url(/img/c3-min.png) no-repeat top center / cover scroll;
-    color: #fcfcfc;
-}
-
-.intro-reception {
-    background: url(/img/downing-colour.png) no-repeat top center / cover scroll;
-}
-
-.intro-accommodation,
-.intro-todocambridge,
-.intro-faq {
-    background: url(/img/watercolour.png) no-repeat top center / cover scroll;
-}
-
-.intro-rsvp {
-    background: url(/img/invite.jpg) no-repeat top center / cover scroll;
+@mixin intro-image($image, $font-colour: $black) {
+    background: url($image) no-repeat top center / cover scroll;
+    color: $font-colour;
 }
 
 
 .intro .intro-body {
-    /*font-family: 'Marck Script', cursive;*/
-    font-family: 'Dancing Script', cursive;
+    font-family: $font-family-serif;
     display: table-cell;
     vertical-align: middle;
 }
 
 .intro .intro-body .brand-heading {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: $font-family-serif;
     font-size: 40px;
 
 }
@@ -295,10 +272,10 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid #0c0c0c;
+    border: 2px solid $intro-font-color;
     border-radius: 35px;
     font-size: 40px;
-    color: #0c0c0c;
+    color: $intro-font-color;
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -308,7 +285,7 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    color: #0c0c0c;
+    color: $intro-font-color;
     background: rgba(255,255,255,.1);
 }
 
@@ -373,7 +350,6 @@ a:focus {
     width: 100%;
     background: url(/img/yellow-sage-banner-1.png) repeat-x left top scroll;
     background-size: 20%;
-    /*background-size: contain;*/
     height: 100px;
 }
 
@@ -381,7 +357,6 @@ a:focus {
     #sticky-header {
         width: 100%;
         background: url(/img/yellow-sage-banner-1.png) repeat-x left top scroll;
-        /*background-size: contain;*/
         background-size: 20%;
         height: 100px;
     }
@@ -391,7 +366,6 @@ a:focus {
     #sticky-header {
         width: 100%;
         background: url(/img/yellow-sage-banner-1.png) repeat-x left top scroll;
-        /*background-size: contain;*/
         background-size: auto 100px;
         height: 100px;
     }
@@ -401,52 +375,9 @@ a:focus {
     padding-top: 100px;
 }
 
-.how_long-section {
-    width: 100%;
-    padding: 50px 0;
-    color: #0c0c0c;
-    background: url(/img/downing.png) no-repeat center center scroll;
-    background-color: $brand-color;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.how_long-section h2 {
-    font-size: 30px;
-}
-
-#countdown {
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    margin: 0;
-}
-
-@media(min-width:993px) {
-    .how_long-section h2 {
-        font-size: 40px;
-    }
-
-    #countdown {
-        font-size: 50px;
-        margin: 0;
-    }
-}
-
-@media(min-width:1024px) {
-
-    .how_long-section h2 {
-        font-size: 50px;
-    }
-    #countdown {
-        font-size: 60px;
-        margin: 0;
-    }
-}
 
 .contact-section {
-    font-family: 'Dancing Script', cursive;
+    font-family: $font-family-serif;
 }
 
 #map {
@@ -472,7 +403,7 @@ a:focus {
 
 .btn {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: $font-family-sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -480,17 +411,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid $secondary-color;
-    color: $secondary-color;
+    border: 1px solid $brand-primary;
+    color: $brand-primary;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid $secondary-color;
+    border: 1px solid $brand-primary;
     outline: 0;
-    color: $brand-color;
-    background-color: $secondary-color;
+    color: $text-color;
+    background-color: transparentize($brand-primary, 0.5);
 }
 
 ul.banner-social-buttons {
@@ -524,7 +455,7 @@ footer {
 }
 
 footer p {
-    font-family: 'Dancing Script', cursive;
+    font-family: $font-family-serif;
     margin: 0;
 }
 
@@ -634,7 +565,7 @@ table {
 
 .subnavbar {
     color: #0c0c0c;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: $font-family-sans-serif;
     margin-bottom: 30px;
     border-bottom: 1px solid #0c0c0c;
 }
@@ -658,9 +589,4 @@ table {
 
 .form-extra-padding {
     padding-top: 7px;
-}
-
-#viparea,
-#rsvpsuccess {
-    display: none;
 }

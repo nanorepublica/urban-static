@@ -1,6 +1,7 @@
-<!-----
+---
 layout: compress
---->
+---
+
 <!DOCTYPE html>
 <html>
     {% include head.html %}
@@ -8,7 +9,7 @@ layout: compress
     {% include nav.html %}
 
     {% include header.html %}
-
+    
     {% for order in site.site-map[page.key].sections %}
         {% for page in site.pages %}
             {% assign name = page.name | remove: '.md' %}

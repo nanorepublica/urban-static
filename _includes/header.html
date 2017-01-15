@@ -7,15 +7,25 @@
 
                         <h1 class="brand-heading">{{ page.header.title }}</h1>
                         <p class="sub-head">{{ page.header.subtitle }}</p>
+                        {% if page.header.cta %}
+                        <p class="intro-text">
+                            <a type="button" name="button" class="btn btn-lg btn-default">
+                            {{ page.header.subsubtitle }}
+                            </a>
+                        </p>
+                        {% else %}
                         <p class="intro-text">{{ page.header.subsubtitle }}</p>
-                        {% if page.key == "home" %}
-                        <a href="#{{ site.site-map[page.key].sections[0] }}" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                        {% elsif page.layout == "detail" %}
-                        <a href="#anchor" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                        {% endif %}
+                        {% if page.header.down-arrow %}
+                            {% if page.key == "home" %}
+                            <a href="#{{ site.site-map[page.key].sections[0] }}" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                            {% elsif page.layout == "detail" %}
+                            <a href="#anchor" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                            {% endif %}
                         {% endif %}
                     </div>
                 </div>
