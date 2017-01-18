@@ -11,12 +11,12 @@ html {
     height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
     margin: 0 0 35px;
     font-family: $font-family-serif;
     text-transform: uppercase;
@@ -38,7 +38,7 @@ p {
 }
 
 a {
-    color: $secondary-color;
+    color: $brand-secondary;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -47,7 +47,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #D6DFC5;
+    color: darken($brand-secondary, 30%);
 }
 
 .light {
@@ -410,18 +410,35 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
-.btn-default {
-    border: 1px solid $brand-primary;
-    color: $brand-primary;
+@mixin button ($colour) {
+    border: 1px solid $colour;
+    color: $colour;
     background-color: transparent;
+}
+
+@mixin button-interact($colour) {
+    border: 1px solid $colour;
+    outline: 0;
+    color: $text-color;
+    background-color: transparentize($colour, 0.5);
+}
+
+.btn-default {
+    @include button($brand-primary);
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid $brand-primary;
-    outline: 0;
-    color: $text-color;
-    background-color: transparentize($brand-primary, 0.5);
+    @include button-interact($brand-primary);
+}
+
+.btn-secondary {
+    @include button($brand-secondary);
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    @include button-interact($brand-secondary);
 }
 
 ul.banner-social-buttons {
@@ -493,6 +510,7 @@ table {
 
 .detail-section p {
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .detail-section a img {
@@ -500,8 +518,8 @@ table {
 }
 
 .detail-section ul {
+    font-size: 18px;
     margin-bottom: 20px;
-    margin-top: -25px;
 }
 
 .detail-section #map {

@@ -35,7 +35,7 @@ Todo:
     * update jquery & easing plugin
     * split out theme scss files
     * split out custom javascript (into library stuff vs custom page stuff vs settings)
-    * lity
+    * lity - video light box
 
 ## Contributing
 
