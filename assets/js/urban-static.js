@@ -290,6 +290,7 @@ function init() {
 };
 
 
+// example function
 function inithome() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -334,3 +335,25 @@ function inithome() {
 
 }
 
+
+function addMarker(map, lat, lng, content, autoOpen) {
+    
+    var info = content || ''
+    var LatLng = new google.maps.LatLng(lat, lng);
+    var Marker = new google.maps.Marker({
+        position: LatLng,
+        map: map,
+    });
+    var InfoWindow = new google.maps.InfoWindow({
+        content: info,
+        maxWidth: 300,
+        position: LatLng
+    });
+    if (autoOpen === true) {
+        InfoWindow.open(map, Marker);
+    }
+
+    google.maps.event.addListener(Marker, 'click', function() {
+        InfoWindow.open(map, Marker);
+    });
+}

@@ -5,7 +5,11 @@ layout: compress
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()">
+    {% if site.site-map[page.key].js %}
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init{{ page.key | replace: '-', '_' }}()">
+    {% else %}
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
+    {% endif %}
     {% include nav.html %}
 
     <!-- About Section -->
