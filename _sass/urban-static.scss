@@ -38,7 +38,7 @@ p {
 }
 
 a {
-    color: $brand-secondary;
+    color: darken($brand-secondary, 30%);
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -47,7 +47,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: darken($brand-secondary, 30%);
+    color: $brand-secondary;
 }
 
 .light {
@@ -410,17 +410,25 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
-@mixin button ($colour) {
+@mixin button ($colour, $inverse:false) {
     border: 1px solid $colour;
-    color: $colour;
+    @if $inverse {
+        color: $text-color;
+    } @else {
+        color: $colour;
+    }
     background-color: transparent;
 }
 
-@mixin button-interact($colour) {
+@mixin button-interact($colour, $inverse:false) {
     border: 1px solid $colour;
     outline: 0;
-    color: $text-color;
-    background-color: transparentize($colour, 0.5);
+    @if $inverse {
+        color: $background-color;
+    } @else {
+        color: $text-color;
+    }
+    background-color: transparentize($colour, 0.7);
 }
 
 .btn-default {
@@ -433,12 +441,12 @@ a:focus {
 }
 
 .btn-secondary {
-    @include button($brand-secondary);
+    @include button($brand-secondary, $inverse:$btn-secondary-inverse);
 }
 
-.btn-default:hover,
-.btn-default:focus {
-    @include button-interact($brand-secondary);
+.btn-secondary:hover,
+.btn-secondary:focus {
+    @include button-interact($brand-secondary, $inverse:$btn-secondary-inverse);
 }
 
 ul.banner-social-buttons {
