@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
     {% include head.html %}
     {% if site.site-map[page.key].js %}
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init{{ page.key | replace: '-', '_' }}()">

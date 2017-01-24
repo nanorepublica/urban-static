@@ -3,6 +3,8 @@ title: Wedding!
 email: wedding@hollyandandrew.co.uk
 url: https://hollyandandrew.co.uk
 description: "Holly Phillips and Andrew Miller are getting Married!"
+share_image: /img/blah.png
+keywords: theme jekyll config example
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
