@@ -9,7 +9,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta property="og:title" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="{{ site.share_image }}" />
+    <meta property="og:image" content="{{ site.share_image | prepend: site.baseurl }}" />
     <meta property="og:description" content="{{ site.description }}" />
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
