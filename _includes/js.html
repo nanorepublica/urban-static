@@ -6,18 +6,18 @@
     var map_center_lat = {{ site.map-center-lat }},
         map_center_lng = {{ site.map-center-lng }};
     </script>
-    <script src="{{ "/assets/js/libs/jquery.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/libs/jquery.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ "/assets/js/libs/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/libs/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="{{ "/assets/js/libs/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/libs/jquery.easing.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-fjiF76Uh_s7gIZ7-KDfKWPQZWaMZNrk"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="{{ "/assets/js/urban-static.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/urban-static.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 
     {% include extra_js.html %}

@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "urban-static"
-  spec.version       = "0.1.4"
+  spec.version       = "0.1.6"
   spec.authors       = ["Andrew Miller"]
   spec.email         = ["info@akmiller.co.uk"]
 
