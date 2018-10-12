@@ -11,7 +11,7 @@
                         {% if page.header.cta %}
                             {% if page.header.cta.first %}
                                 {% for link in page.header.cta %}
-                                <div class="col-xs-12 col-md-{{ 12 | divided_by: page.header.cta.length }}">
+                                <div class="col-xs-12 col-md-{{ 12 | divided_by: forloop.length }}">
                                     <a type="button" name="button" class="btn btn-lg btn-default" href="{{ page.header.cta }}">
                                         {{ page.header.subsubtitle }}    
                                     </a>
