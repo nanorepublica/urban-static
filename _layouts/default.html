@@ -13,7 +13,7 @@ layout: compress
     {% include nav.html %}
 
     {% include header.html %}
-    
+
     {% for order in site.site-map[page.key].sections %}
         {% for page in site.pages %}
             {% assign name = page.name | remove: '.md' %}
@@ -21,9 +21,17 @@ layout: compress
             {% if name == order %}
                 <section id="{{ name }}" class="content-section text-center">
                     <div class="{{ name }}-section">
+                      {% if page.full-width %}
+                        <div class="container-fluid">
+                      {% else %}
                         <div class="container">
+                      {% endif %}
                             <div class="row">
+                                    {% if page.full-width %}
+                                    <div class="col-lg-12">
+                                    {% else %}
                                     <div class="col-lg-8 col-lg-offset-2">
+                                    {% endif %}
                                         {{ page.content | markdownify }}
                                     </div>
                                 </div>
